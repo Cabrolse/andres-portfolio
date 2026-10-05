@@ -392,6 +392,7 @@ a {
 }
 
 .project-card {
+  position: relative;
   display: flex;
   align-items: center;
   border: 1px solid rgba(26, 58, 74, 0.12);
@@ -401,7 +402,7 @@ a {
     transform 0.3s ease,
     box-shadow 0.3s ease;
   gap: 20px;
-  padding: 20px;
+  padding: 52px 20px 20px;
   margin-bottom: 1.5rem;
 }
 
@@ -429,6 +430,78 @@ a {
   border-radius: 10px;
 }
 
+.status-badge {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.status-badge.completed {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status-badge.completed .status-dot {
+  background-color: #10b981;
+}
+
+
+.status-badge.in-progress {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.status-badge.in-progress .status-dot {
+  background-color: #3b82f6;
+  animation: pulse-ring 1.8s infinite ease-in-out;
+}
+
+
+.status-badge.on-hold {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.status-badge.on-hold .status-dot {
+  background-color: #f59e0b;
+}
+
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(59, 130, 246, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
 /* RESPONSIVE DESIGN FOR TABLET & MOBILE */
 
 /* Keep project cards stacked until there is enough room for the image. */
@@ -437,7 +510,7 @@ a {
     align-items: stretch;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 3.5rem 1rem 1rem;
   }
 
   .project-card-content {
@@ -714,8 +787,14 @@ a {
 
   .project-card {
     gap: 0.25rem;
-    padding: 0.75rem;
+    padding: 3.25rem 0.75rem 0.75rem;
     margin-bottom: 1rem;
+  }
+
+  .status-badge {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .project-card-content {
