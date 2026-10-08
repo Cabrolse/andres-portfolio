@@ -968,9 +968,7 @@ a {
   animation-delay: 0.8s;
 }
 
-.wave-text span:nth-child(6) {
-  animation-delay: 1s;
-}
+
 
 @keyframes wave {
 
