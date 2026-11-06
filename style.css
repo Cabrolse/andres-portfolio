@@ -1,7 +1,6 @@
 /* elements */
 :root {
-  --dblue: #1a3a4a;
-  --mblue: rgb(255, 127, 80);
+  --var1: #1a3a4a;
   --secondary-color: #8e969d;
   --accent-color: #6e6e6e;
   --background-color: #f6f1e9;
@@ -23,19 +22,19 @@ h1 {
   z-index: 1;
   position: absolute;
   padding-top: 20px;
-  color: var(--dblue);
+  color: var(--var1);
 }
 
 h2 {
   z-index: 1;
   font-family: "work sans";
-  color: var(--dblue);
+  color: var(--var1);
 }
 
 h3,
 label {
   font-family: "open sans";
-  color: var(--dblue);
+  color: var(--var1);
 }
 
 p,
@@ -43,13 +42,13 @@ a,
 
 button {
   font-family: "space mono";
-  color: var(--dblue);
+  color: var(--var1);
 }
 
 a {
   background-color: #0000;
   text-decoration: none;
-  color: var(--dblue);
+  color: var(--var1);
 }
 
 * {
@@ -88,12 +87,12 @@ a {
 .nameLogo h2 {
   margin: 0;
   font-size: 30px;
-  color: var(--dblue);
+  color: var(--var1);
   transition: 0.3s ease;
 }
 
 .nameLogo:hover h2 {
-  color: var(--mblue);
+  color: var(--var2);
 }
 
 .nameLogo:hover img {
@@ -121,7 +120,7 @@ a {
 }
 
 .nav-link:hover {
-  color: var(--mblue);
+  color: var(--var2);
 }
 
 .navigation {
@@ -153,7 +152,7 @@ a {
   transition:
     transform 0.5s ease,
     box-shadow 0.5s ease;
-  border: 10px solid var(--mblue);
+  border: 10px solid var(--var2);
   width: clamp(150px, 40vw, 300px);
   height: auto;
   max-width: 100%;
@@ -161,7 +160,7 @@ a {
 }
 
 .hero-andre:hover {
-  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45);
+  box-shadow: 0 12px 24px rgba(34, 31, 63, 0.45);
   /* Soft coral */
   transform: scale(1.05);
 }
@@ -281,7 +280,7 @@ a {
 }
 
 .ft-content a:hover {
-  color: var(--mblue);
+  color: var(--var2);
 }
 
 .ftbox {
@@ -311,7 +310,7 @@ a {
   padding: 5px 0px;
   border-radius: 10px;
   font-weight: 600;
-  background-color: var(--dblue);
+  background-color: var(--var1);
   border: 2px solid;
   opacity: 1;
   color: white;
@@ -771,7 +770,7 @@ a {
 
   .hero-andre {
     width: clamp(100px, 35vw, 180px);
-    border: 6px solid var(--mblue);
+    border: 6px solid var(--var2);
   }
 
   .hero-social img {
